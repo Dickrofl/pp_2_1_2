@@ -13,9 +13,7 @@ public class AppConfig {
     }
     @Bean(name="cat")
     @Scope("prototype")
-    public Cat getCat() {
-        Cat cat = new Cat();
-        cat.setMessage("This cat is a paranormal phenomenon!");
-        return cat;
-    }
+    public Cat cat(){
+        return new Cat();
+    };
 }
